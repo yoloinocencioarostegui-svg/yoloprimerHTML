@@ -1,8 +1,62 @@
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, Helvetica, sans-serif;
+/* Fondo general con degradado suave */
+body{
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    padding-top: 100px;
+    margin: 0;
+    min-height: 100vh;
 }
 
-h1 {color: #007acc;
+/* Estilo del titulo */
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0.4);
+}
+
+/* Estilo del botón con efectos al pasar el cuersor */
+button{
+    background-color: #ff4757;
+color: white;
+border: none;
+padding: 15px 30px;
+font-size: 1.2rem;
+font-weight: bold;
+border-radius: 50px;
+cursor: pointer;
+box-shadow: 0 4px 15px rgba(0,0,0.2);
+transition: all 0.3s ease; /* Transición suave para los efectos */
+}
+
+/* Efecto al pasar el ratón (hover) */
+button:hover {
+    background-color: #ff6b81;
+    transform: scale(1.1); /* Hace que el botón cresca un poco */
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0,6);
+}
+
+/* Efecto al hacer clic */
+button:active {
+    transform: scale(0.95);
+}
+
+/* 1. Bloque principal (siempre visible) */
+.mensaje-flotante {
+    position: fixed;/* Lo fija en la pantalla */
+    bottom: 20px;/* Distancia desde abajo */
+    right: 20px;/* Distancia desde la derecha (puedes cambiar a left: 20px si lo quieres a la izquierda) */
+    background-color: #e01409;/* Color de fondo */
+    color: rgb(247, 244, 244);/* Color del texto */
+    padding: 12px 20px;/* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);/* Sombra para que flote */
+    font-family: sans-serif;
+    font-size: 14px;/* Tamaño de letra */
+    z-index: 1000;/* Queda por encima de todo */
+    transition: transform 0.3s ease;/*Prepara la animacion */
+}
+
+/* 2. Bloque de efecto (solo se activa al pasar el cursor) */
+.mensaje-flotante:hover {
+    transform: translate(-5px); /* Da el pequeño salto hacia arriba */
 }
